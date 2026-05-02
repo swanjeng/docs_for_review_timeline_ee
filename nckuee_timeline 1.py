@@ -15,7 +15,7 @@ dates = [date(1900, 1, 1), date(1905, 1, 1), date(1910, 1, 1)]
 min_date = date(np.min(dates).year - 5, np.min(dates).month, np.min(dates).day)
 max_date = date(np.max(dates).year + 5, np.max(dates).month, np.max(dates).day)
 
-label_dates = [date(1898, 1, 1), date(1902, 1, 1), date(1906, 7, 1)]
+label_dates = [date(1897, 7, 1), date(1901, 7, 1), date(1906, 7, 1)]
 
 str1 = """高中畢業 ~ 入學前：
     1. 考 7 月的 APCS，挑戰
@@ -25,22 +25,18 @@ str1 = """高中畢業 ~ 入學前：
        代數的先修。"""
 
 str2 = """大一：
-    1. 學習微積分、普通物理、計
-       算機概論、程式設計、線性
-       代數、邏輯系統等核心課程。
-    2. 選修「電工實驗」、「邏輯
-       系統實驗」、通識課「永續
-       發展目標 (SDGs) 導論」等
-       課程。
+    1. 學習微積分、普通物理、計算機概論、程式
+       設計、線性代數、邏輯系統等核心課程。
+    2. 選修「電工實驗」、「邏輯系統實驗」、通
+       識課「永續發展目標 (SDGs) 導論」等課程。
     3. 參與 電腦網路愛好社 社團。"""
 
 str3 = """大二：
-    1. 學習工程數學、電機概論、電路學、
-       電子學等核心課程。
-    2. 選修「平面顯示器概論」、「單晶片
-       系統設計與應用」、「離散數學」、
-       「計算機組織」和「資料結構緒論」
-       等課程。"""
+    1. 學習工程數學、電機概論、電路學、電子
+       學等核心課程。
+    2. 選修「平面顯示器概論」、「單晶片系統
+       設計與應用」、「離散數學」、「計算機
+       組織」和「資料結構緒論」等課程。"""
 
 labels = [str1, str2, str3]
 
@@ -51,7 +47,7 @@ ax.axhline(0, xmin=0.05, xmax=0.95, color=(0.5, 0, 0), zorder=1, lw=3)
 
 ax.scatter(dates, np.zeros(len(dates)), s=240, color=(1, 0, 0), zorder=2)
 
-label_offsets = [0.3, -2.1, 0.3]
+label_offsets = [0.3, -1.5, 0.3]
 for i in range(len(dates)):
     ax.text(label_dates[i], label_offsets[i], labels[i], ha='left',
             color=(0, 0, 0), linespacing=2, backgroundcolor=(1, 0.9, 0.9))

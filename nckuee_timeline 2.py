@@ -15,24 +15,28 @@ dates = [date(1900, 1, 1), date(1905, 1, 1), date(1910, 1, 1)]
 min_date = date(np.min(dates).year - 5, np.min(dates).month, np.min(dates).day)
 max_date = date(np.max(dates).year + 5, np.max(dates).month, np.max(dates).day)
 
-label_dates = [date(1897, 1, 1), date(1902, 7, 1), date(1907, 7, 1)]
+label_dates = [date(1896, 1, 1), date(1902, 1, 1), date(1907, 1, 1)]
 
 str4 = """大三：
-    1. 學習電磁學、電子電路實
-       驗、電儀表學等核心課程。
-    2. 選修「影像處理」、「作
-       業系統」、「控制工程實
-       驗」、「資訊與通訊學群
-       專題研究」等課程。
+    1. 學習電磁學、電子電路實驗、電儀表學等核心課
+       程。
+    2. 選修「影像處理」、「作業系統」、「控制工程
+       實驗」、「資訊與通訊學群專題研究」等課程。
     3. 選擇資訊工程組。"""
 
 str5 = """大四：
-    1. 選修「系統程式」和「數位
-       設計硬體描述語言」等課程。"""
+    1. 選修「系統程式」、「數位設計
+       硬體描述語言」和「人工智慧晶
+       片設計與應用」等課程。
+    2. 選修「綠領人才：用綠色改變生
+       活」等通識課。"""
 
 str6 = """大學畢業後：
-    1. 繼續升學，前進資訊工程研究所。
-    2. 研究所畢業後，到科技公司就業。"""
+    1. 繼續升學，在資訊工程研究所學習
+       更深入的軟體工程及人工智慧知識。
+    2. 研究所畢業後，到科技公司就業，
+       程式開發時以使用者的需求為重。
+    3. 持續製作能夠幫助他人的程式作品。"""
 
 labels = [str4, str5, str6]
 
@@ -43,7 +47,7 @@ ax.axhline(0, xmin=0.05, xmax=0.95, color=(0.5, 0, 0), zorder=1, lw=3)
 
 ax.scatter(dates, np.zeros(len(dates)), s=240, color=(1, 0, 0), zorder=2)
 
-label_offsets = [-2, 0.3, -0.9]
+label_offsets = [-1.6, 0.3, -1.6]
 for i in range(len(dates)):
     ax.text(label_dates[i], label_offsets[i], labels[i], ha='left',
             color=(0, 0, 0), linespacing=2, backgroundcolor=(1, 0.9, 0.9))
